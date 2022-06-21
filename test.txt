@@ -1,0 +1,41 @@
+Core Mechanics
+Player Ship
+
+The player will directly move their ship up, down, left, and right (inthe XY plane) using the WASD or arrow keys 
+PlayerShip maximum speed will be 10m/s, and the ship should tilt slightly in the direction of motion.
+The PlayerShip is composed of two models: the ship body and the turret.  
+The PlayerShip begins with three Jumps. When the PlayerShip collides with an Asteroid, it will
+destroy the Asteroid and jump/teleport the PlayerShip to a safer location (consuming 1 Jump in the
+process).
+
+Firing
+The PlayerShip will fire a bullet every time the player clicks the left mouse button . The turret will constantly rotate to track the (visible) mouse pointer . Bullets will
+move at a speed of 20m/s and will be spherical  . After two seconds, Bullets will destroy
+themselves. Bullets will also be destroyed if they collide with an Asteroid.
+
+Asteroids
+ When an Asteroid is spawned, it is generated at a random rotation with a random velocity  .
+There is 2 types of Asteroid :
+- Asteriods that give the player points (blue color ) 
+- Asteriods that give the player a power up  ( invincibilty for a limited time / red color  ) 
+
+
+
+When an Asteroid collides with a Bullet, both the Bullet and Asteroid are destroyed, and the Player
+gains points 
+
+
+Level Completion and Game Over
+The level is completed when all Asteroids have been destroyed. The game is over when the
+PlayerShip hits an Asteroid but has zero Jumps remaining.
+
+
+Game Features
+Interstitial Screens
+The game should have Main Menu, Level Load, and a Game Over screens. The Level Load and
+Game Over screens should have simple animation of the text boxes.
+
+
+
+Design pattern :
+it's recommended to use object pooling for the asteriods and singletons for the managers .
